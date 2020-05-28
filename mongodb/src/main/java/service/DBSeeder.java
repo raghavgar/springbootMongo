@@ -23,20 +23,20 @@ public class DBSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-      
-    	 System.out.println("started Insertion");
 
-        Claim claim1 = new Claim("C001", Arrays.asList(new ClaimLines(1, "First Line") ,
+        System.out.println("started Insertion");
+
+        Claim claim1 = new Claim("C001", Arrays.asList(new ClaimLines(1, "First Line"),
                 new ClaimLines(2, "Second Line")), new ProviderInfo("provider1", "NPI1"));
 
-        Claim claim2 = new Claim("C001", Arrays.asList(new ClaimLines(1, "First Line") ,
+        Claim claim2 = new Claim("C001", Arrays.asList(new ClaimLines(1, "First Line"),
                 new ClaimLines(2, "Second Line")), new ProviderInfo("provider1", "NPI1"));
 
-        Claim claim3 = new Claim("C001", Arrays.asList(new ClaimLines(1, "First Line") ,
+        Claim claim3 = new Claim("C001", Arrays.asList(new ClaimLines(1, "First Line"),
                 new ClaimLines(2, "Second Line")), new ProviderInfo("provider1", "NPI1"));
 
         System.out.println("Before Insertion");
-        
+
         TestDocument test = new TestDocument(10);
         this.mongoTemplate.insert(test);
 

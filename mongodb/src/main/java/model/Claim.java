@@ -31,8 +31,9 @@ public class Claim {
     private Collection<ClaimLines> claimLines = new ArrayList<>();
     @Field("provider_Information")
     private ProviderInfo providerInfo;
-    
-    protected Claim() {}
+
+    protected Claim() {
+    }
 
     public Claim(String claimId, Collection<ClaimLines> claimLines, ProviderInfo providerInfo) {
         this.claimId = claimId;

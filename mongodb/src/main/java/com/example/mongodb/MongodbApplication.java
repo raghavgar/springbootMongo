@@ -20,7 +20,7 @@ public class MongodbApplication {
         System.out.println("Testing this ....");
         return "Spring boot is working!";
     }
-    
+
     @Autowired
     MongoTemplate mongoTemplate;
     
@@ -41,10 +41,10 @@ public class MongodbApplication {
 
         return runner;
     }*/
-    
+
     public static void main(String[] args) {
-    	System.out.println("Mongo database args:: " + args);
-    	System.out.print(args.toString());
+        System.out.println("Mongo database args:: " + args);
+        System.out.print(args.toString());
         SpringApplication.run(MongodbApplication.class, args);
 
     }
