@@ -20,6 +20,28 @@ public class WebControllerUsingRepository {
     }
 
     /*
+curl -X POST  http://localhost:8080/repoWebInsert  -H 'cache-control: no-cache'   -H 'content-type: application/json'   -d '{
+  "id": "web2",
+  "firstName": "Lays",
+  "lastName": "Uncle",
+  "address": {
+    "streetName": "No Where",
+    "zipcode": "9999"
+  },
+  "purchases": [
+    {
+      "itemId": "104",
+      "itemDesc": "Item Desc",
+      "price": 23.5
+    },
+    {
+      "itemId": "105",
+      "itemDesc": "Item Desc",
+      "price": 25.58
+    }
+ ]
+
+ }'
 
     */
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
